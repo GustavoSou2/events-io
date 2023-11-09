@@ -1,0 +1,17 @@
+@import "/src/assets/scss/variabels.global";
+
+// fonts
+@import "/src/assets/scss/fonts.global";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: 0;
+    transition: all 300ms linear;
+}

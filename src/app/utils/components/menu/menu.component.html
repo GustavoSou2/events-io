@@ -1,0 +1,32 @@
+<section id="menu">
+    <header class="menu__header">
+        <nav class="menu_header__nav">
+            <span class="menu_header_nav__logo">EventIO</span>
+            <label for="search_input" class="menu_header_nav__search">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" class="menu_header_nav__search_input" placeholder="Pesquisar" id="search_input">
+            </label>
+            <div class="menu_header_nav__group_button_session">
+                <button>Criar Conta</button>
+                <button>Login</button>
+            </div>
+        </nav>
+    </header>
+    <main class="menu__main">
+        <aside class="menu__aside">
+            <ul class="menu_aside__menu">
+                <li *ngFor="let item of items; trackBy: trackByFn" class="menu_aside_menu__item">
+                    <a [routerLink]="item.link" class="menu_aside_menu__item_link">
+                        <i [class]="item.icon"></i>
+                        {{ item.description }}
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <article class="menu__article_content">
+            <section class="article_content__container">
+                <ng-content select="[routeOutletContet]"></ng-content>
+            </section>
+        </article>
+    </main>
+</section>
